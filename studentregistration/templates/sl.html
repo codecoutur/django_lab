@@ -1,0 +1,10 @@
+{% extends "student_layout.html" %}
+{% block title %}Student List{% endblock %}
+{% block content %}
+<p>Welcome to View Students list</p>
+<table>
+{% for student in students %}
+<tr><td>{{student.usn}}</td><td>{{student.name}}</td><td>{{ student.sem }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "student_layout.html" %}
+{% block title %}Project Registration{% endblock %}
+{% block content %}
+<form onsubmit = "" method = "POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+        <tr><td><button type = "submit">Submit</button></td></tr>
+    </table>
+</form>
+{% if result %}
+<p>{{result}}</p>
+{% endif %}
+{% endblock %}

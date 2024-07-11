@@ -1,0 +1,9 @@
+{% extends "student_layout.html" %}
+{% block title %}Course List{% endblock %}
+{% block content %}
+<table>
+{% for course in courses %}
+<tr><td>{{ course.course_name }}</td><td>{{ course.course_code }}</td><td>{{ course.course_credits }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        {% block title %}{% endblock %}
+        <style>
+            nav
+            {
+                background-color:rgba(0,0,0,0.8);
+                padding:15px;   
+            }
+            nav a
+            {
+                border-radius:5px;
+                flex-wrap:wrap
+                color:white;
+                
+            }
+            nav a:hover
+            {
+                background-color:aqua;
+            }
+            ul
+            {
+                display:flex;
+                flex-direction:row;
+                flex-wrap:wrap;
+                justify-content:space-between;
+                list-style-type:none;
+                
+            }
+            li
+            {
+                font-size:30px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul><li><a href = "/home/">Home</a></li><li><a href = "/about/">About</a></li><li><a href = "/contact/">Contact</a></li></ul>
+        </nav>
+        <section>{% block content %}{% endblock %}</section>
+        <hr>
+        <footer>
+            &copy; Developed by Student of RNSIT
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "student_layout.html" %}
+{% block title %}Project List{% endblock %}
+{% block content %}
+<form onsubmit = "" method = "POST">
+    {% csrf_token %}
+    <select name = "project">
+    {% for project in projects %}
+    <option value = {{project.id}}>{{ project.ptopic }}</option>
+    {% endfor %}
+    </select>
+    <button type = "submit">Submit</button>
+</form>
+{% if student %}
+    <ol>
+    <li>{{ student.name }}-{{student.usn }}-{{student.sem }}</li>
+    </ol>
+{% endif %}
+{% endblock %}

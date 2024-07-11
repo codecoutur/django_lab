@@ -1,0 +1,44 @@
+<html>
+    <head>
+        {% block title %}{% endblock %}
+        <style>
+            nav 
+            {
+                background-color:rgba(0,0,0,0.7);
+                padding:15px;
+            }
+            nav a
+            {
+                border-radius:5px;
+                color:white;
+                flex-wrap:wrap;
+                font-size:20px;
+            }
+            nav a:hover
+            {
+                background-color:aqua;
+            }
+            ul{
+                display:flex;
+                flex-direction:row;
+                flex-wrap:wrap;
+                justify-content:space-between;
+                list-style-type:none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href ="">Home</a></li>
+                <li><a href = "/reg/">Course Registration</a></li>
+                <li><a href = "/el/">Enrolled List</a></li>
+                <li><a href = "/cl/">CourseList</a></li>
+                <li><a href = "/sl/">StudentList</a></li>
+                <li><a href = "/preg/">Project Registration</a></li>
+                <li><a href = "/pl/">Project List</a></li>
+            </ul>
+        </nav>
+        <section>{% block content %}{% endblock %}</section>
+    </body>
+</html>
